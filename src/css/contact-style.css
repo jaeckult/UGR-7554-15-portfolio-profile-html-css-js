@@ -26,12 +26,12 @@ a {
     align-items: center;
 }
 
-.nav_site-logo-wrapper {
+.nav__logo-wrapper {
     display: flex;
     align-items: center;
 }
 
-.nav_site-logo {
+.nav__logo {
     display: block;
 }
 
@@ -72,19 +72,59 @@ a {
     border-bottom: 1px solid #FDFDFD;
 }
 
-.contact-page {
-    max-width: 800px;
-    margin: 0 auto;
+.contact-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #1A2A49;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.sidebar__item {
+    margin-bottom: 1rem;
+}
+
+.sidebar__item h3 {
+    margin: 0;
     color: #CCD6F6;
 }
 
-.contact-page__info {
-    margin-bottom: 2rem;
+.sidebar__item p {
+    margin: 0.5rem 0 0;
+    color: #FDFDFD;
+}
+
+.contact-page {
+    flex: 2;
+    background-color:#8892B0;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #CCD6F6;
+    border-radius: 10%;;
+}
+
+.contact-page__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .contact-page__form {
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-input {
+    display: flex;
     gap: 1rem;
 }
 
@@ -97,7 +137,7 @@ a {
     padding: 0.5rem;
     border: 1px solid #CCD6F6;
     border-radius: 5px;
-    background-color: #1A2A49;
+    background-color: #0A1A39;
     color: #FDFDFD;
 }
 
@@ -105,7 +145,7 @@ a {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    background-color: #CCD6F6;
+    background-color: rgba(0, 0, 255, 0.218)(0, 0, 255, 0.218);
     color: #0A1A39;
     border: none;
     border-radius: 5px;
@@ -119,8 +159,10 @@ a {
 /* Footer styles */
 .site-footer {
     background-color: #0A1A39;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     border-top: 1px solid #FDFDFD;
+    display: flex;
+    justify-content: space-around;
 }
 
 .site-footer__list {
@@ -150,4 +192,38 @@ a {
     text-align: center;
     color: #FDFDFD;
     margin-top: 1rem;
+}
+
+/* Media Queries */
+
+
+@media (max-width: 480px) {
+    .nav__logo-wrapper {
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .site-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .site-nav__list {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+
+    .site-main {
+        padding: 1rem;
+        margin: 2vw;
+    }
+
+    .contact-container {
+        flex-direction: row;
+    }
+
+    .site-footer__list {
+        flex-direction: row;
+        gap: 0.5rem;
+    }
 }
