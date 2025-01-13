@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const downloadButton = document.querySelector('.site-hero__download-button');
+
+    downloadButton.addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = './CV-File/Yitbarek-Alemu-FlowCV-Resume.pdf'; 
+        link.download = 'Yitbarek-Alemu-FlowCV-Resume.pdf'; 
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    });
     const navLinks = document.querySelectorAll('.site-nav__link');
     navLinks.forEach(link => {
         link.addEventListener('mouseover', () => {
